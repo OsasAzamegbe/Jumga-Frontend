@@ -14,7 +14,7 @@ const Input = ({id, label, onChange, value, name, type, isRequired, placeholder,
             type={type}
             required={isRequired}
             placeholder={placeholder}
-            inputmode={type === "number" ? "decimal" : "text"}
+            inputMode={type === "number" ? "decimal" : "text"}
             />
             {errors ? <small className="error">{ errors[name]  }</small>: null}
         </div>
