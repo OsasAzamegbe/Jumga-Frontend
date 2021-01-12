@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa';
 import './Navbar.css';
 
@@ -8,13 +8,12 @@ import './Navbar.css';
 const Navbar = () => {
 
     const [click, setClick] = useState(false);
-    // let history = useHistory();
 
     const clickHandler = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
     // const signoutHandler = async () => {
     //     closeMobileMenu();
-    //     history.push('/');
+    //     return <Redirect to="/" />;
     // };
 
     // const protectedLinks = (
@@ -32,7 +31,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className={`navbar-container container ${click ? "active" : ""}`}>
                 <Link to="/" className="navbar-logo" onClick={closeMobileMenu}  >
-                    Well Engr
+                    Jumga
                 </Link>
                 <div className="menu-icon" onClick={clickHandler} >              
                     {click ? <FaTimes className="fa-times" /> : <FaBars className="fa-bars"/>}
