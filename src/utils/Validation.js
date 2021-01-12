@@ -46,15 +46,15 @@ const validateInput = (options, setErrors) => {
         };
     };
 
-    if (keys.includes("passwordConfirm")){
-        const passwordConfirm = options.passwordConfirm.trim();
-        if (!options.password || options.password !== passwordConfirm){
-            setErrorsObj(setErrors, "passwordConfirm", "Passwords do not match.");
+    if (keys.includes("password_confirm")){
+        const password_confirm = options.password_confirm.trim();
+        if (!options.password || options.password !== password_confirm){
+            setErrorsObj(setErrors, "password_confirm", "Passwords do not match.");
             status= false;
         } 
     };
 
-    const validated = Object.assign({}, ...Object.keys(options).map(key => !["password", "passwordConfirm"].includes(key) 
+    const validated = Object.assign({}, ...Object.keys(options).map(key => !["password", "password_confirm"].includes(key) 
     ? ({ [key]: options[key].trim()})
     : ({ [key]: options[key]})));
 
