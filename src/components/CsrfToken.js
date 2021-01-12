@@ -6,20 +6,16 @@ const CsrfToken = () => {
     useEffect(() =>{
         const loadCsrf = async () =>{
             const url = `${process.env.REACT_APP_BACKEND_API_URL}/getcsrf`;
-            const config = {
-                "Accept": "application/json",
-                "Content-type": "application/json"
-            }
-            console.log(url)
-            const response = await axios.get(url, config);
-            console.log(response)
+            await axios.get(url);
         };
 
         loadCsrf();
     }, []);
 
     return (
-        <input hidden disabled/>
+        <div>
+            <input type="hidden"/>
+        </div>
     );
 };
 
