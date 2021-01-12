@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import Navbar from './components/Navbar';
 import Home from './pages/home/Home';
+import Signup from './pages/signup/SignUp';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Navbar/>
         <Switch>
           <Route exact to="/" component={Home}/>
+          <Route to="/signup/" component={Signup}/>
         </Switch>
       </Router>
     </div>

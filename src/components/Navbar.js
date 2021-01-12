@@ -43,6 +43,11 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to="/signup/" className="nav-links" onClick={closeMobileMenu} >
+                            SIGN UP
+                        </Link>
+                    </li>
                     
                     {/* {
                         user ?
