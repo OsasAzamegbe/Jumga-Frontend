@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import './SignUp.css'
 
 import Form from '../../components/Form';
 import Card from '../../components/Card';
@@ -185,11 +186,9 @@ const SignUpForm = () => {
 
 const SignUp = () => {
     return (
-        <div className="wellcontrol" >
+        <div className="page" >
             <header>CREATE AN ACCOUNT TODAY</header>            
-            <div className="wellcontrol-cards-container" >
-                <Card childComponent={<SignUpForm/>} />
-            </div> 
+            <Card childComponent={<SignUpForm/>} />
         </div>               
     );
 };
